@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Настройка напитка</title>
+
+    <link rel="stylesheet" href="coffee.css">
+
+</head>
+
+<body>
+
+<button id="settingsBtn">Настройка вашего напитка</button>
+
+<div id="settingsModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Настройки вашего напитка</h2>
+
+        <div class="settings-option">
+
+            <h3>Уровень крепости</h3>
+
+            <div class="option">
+
+                <input type="radio" id="light" name="fortressLevel" value="light">
+
+                <label for="light"><img src="1.png" alt="Легкий" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="medium" name="fortressLevel" value="medium">
+
+                <label for="medium"><img src="1.png" alt="Средний" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="strong" name="fortressLevel" value="strong">
+
+                <label for="strong"><img src="1.png" alt="Крепкий" class="option-img"></label>
+
+            </div>
+
+        </div>
+
+        <div class="settings-option">
+
+            <h3>Уровень сладости</h3>
+
+            <div class="option">
+
+                <input type="radio" id="no-sugar" name="sweetnessLevel" value="no-sugar">
+
+                <label for="no-sugar"><img src="1.png" alt="Без сахара" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="moderate" name="sweetnessLevel" value="moderate">
+
+                <label for="moderate"><img src="1.png" alt="Умеренный" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="sweet" name="sweetnessLevel" value="sweet">
+
+                <label for="sweet"><img src="1.png" alt="Сладкий" class="option-img"></label>
+
+            </div>
+
+        </div>
+
+        <div class="settings-option">
+
+            <h3>Тип молока</h3>
+
+            <div class="option">
+
+                <input type="radio" id="cow" name="milkType" value="cow">
+
+                <label for="cow"><img src="1.png" alt="Коровье" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="banana" name="milkType" value="banana">
+
+                <label for="banana"><img src="1.png" alt="Банановое" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="almond" name="milkType" value="almond">
+
+                <label for="almond"><img src="1.png" alt="Миндальное" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="oat" name="milkType" value="oat">
+
+                <label for="oat"><img src="1.png" alt="Овсяное" class="option-img"></label>
+
+            </div>
+
+        </div>
+
+        <div class="settings-option">
+
+            <h3>Уровень температуры</h3>
+
+            <div class="option">
+
+                <input type="radio" id="cold" name="temperatureLevel" value="cold">
+
+                <label for="cold"><img src="1.png" alt="Холодный" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="medium-temp" name="temperatureLevel" value="medium">
+
+                <label for="medium-temp"><img src="1.png" alt="Средний" class="option-img"></label>
+
+            </div>
+
+            <div class="option">
+
+                <input type="radio" id="hot" name="temperatureLevel" value="hot">
+
+                <label for="hot"><img src="1.png" alt="Горячий" class="option-img"></label>
+
+            </div>
+
+        </div>
+
+        <button id="addToCartBtn">Добавить в корзину</button>
+
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="coffee.js"></script>
+
+</body>
+
+</html>
+
