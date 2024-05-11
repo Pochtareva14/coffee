@@ -45,6 +45,9 @@
 }
 
 /* Стили для заголовков */
+.nasvas{
+    padding-top: 30px;
+}
 
 .modal-content h2,
 
@@ -150,4 +153,7 @@
 
     border-color: blue;
 
+}
+.bbottom{
+    margin-bottom: 30px;
 }
