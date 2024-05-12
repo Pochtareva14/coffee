@@ -21,7 +21,40 @@ $(document).ready(function() {
         const filteredCoffee = filterCoffee(selectedStrength, selectedSweetness, selectedMilk, selectedTemperature);
 
         // Открываем новую вкладку
+        // Открываем новую вкладку
         const newTab = window.open('', '_blank');
+
+        // Создаем HTML-код для отображения выбранного кофе
+        const selectedCoffeeHTML = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Выбранный напиток</title>
+            <link rel="stylesheet" href="coffee.css">
+        </head>
+        <body>
+            <div class="selected-coffee-container">
+                <h2>Выбранный напиток</h2>
+        </body>
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+</style>
+        </html>
+    `;
+
+        // Устанавливаем HTML-код в новой вкладке
+        newTab.document.write(selectedCoffeeHTML);
 
         // В новой вкладке отображаем отфильтрованные кофе
         filteredCoffee.forEach(coffee => {
@@ -36,6 +69,39 @@ $(document).ready(function() {
                 addToCart(coffee);
             });
 
+            coffeeDiv.css({
+                textAlign: 'center',
+                width: '200px',
+                border: '1px solid #ccc',
+                padding: '10px',
+                marginBottom: '20px',
+                fontFamily: 'Arial, sans-serif',
+            });
+
+            coffeeName.css({
+                fontSize: '18px',
+                fontFamily: 'Arial, sans-serif',
+            });
+
+            coffeeImg.css({
+                maxWidth: '100px',
+                fontFamily: 'Arial, sans-serif',
+            });
+
+            coffeeDesc.css({
+
+                fontFamily: 'Arial, sans-serif',
+            });
+
+            coffeeButton.css({
+                backgroundColor: '#4CAF50',
+                color: 'white',
+                padding: '10px 20px',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontFamily: 'Arial, sans-serif',
+            });
             coffeeDiv.append(coffeeName,coffeeImg, coffeeDesc, coffeeButton);
             newTab.document.body.append(coffeeDiv[0]);
         });
@@ -65,6 +131,4 @@ function filterCoffee(strength, sweetness, milk, temperature) {
 function addToCart(coffee) {
     // Здесь можно добавить выбранный кофе в корзину
 }
-
-
 
